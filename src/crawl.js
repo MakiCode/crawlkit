@@ -18,7 +18,7 @@ const l = require('./logger');
  * @private
  * @type {String}
  */
-const defaultAbsoluteTo = 'http://';
+// const defaultAbsoluteTo = 'http://';
 
 module.exports = (crawlerInstance, writeResult, runnerKey, finderKey) => {
   const suffix = crawlerInstance.name ? `:${crawlerInstance.name}` : '';
@@ -39,7 +39,7 @@ module.exports = (crawlerInstance, writeResult, runnerKey, finderKey) => {
     let q = null;
     const addUrl = (u) => {
       let url = urijs(u);
-      url = url.absoluteTo(defaultAbsoluteTo);
+      // url = url.absoluteTo(defaultAbsoluteTo);
       url.normalize();
       url = url.toString();
 
